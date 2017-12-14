@@ -96,13 +96,23 @@ WSGI_APPLICATION = 'evente_main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
+DATABASESx = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dbahgfnpm7sha7',
+        'USER': 'rdnylxsipprbuw',
+        'PASSWORD': 'efe54c47dd076f6ca9b8ae0cee0bda72e65ba85eb8eb4874de3442c498d202ff',
+        'HOST': 'ec2-174-129-218-106.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
